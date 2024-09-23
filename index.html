@@ -4,17 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flood Donation</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <!-- tailwind Cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- dayisui UI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .lexend {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+    </style>
 </head>
-<body>
+<body class="lexend">
 
-    <h1>testing code</h1>
+    <header class="  fixed w-full">
+        <nav class="  bg-orange-50 ">  
+            <!-- main nav parent -->
+            <div class="container  mx-auto flex justify-between items-center sm:gap-10 py-4">
+                <!-- button -->
+                 <div>
+                    <button class="py-2 px-7 rounded-lg shadow-2xl font-semibold bg-lime-300 text-center text-lg">Blog</button>
+                 </div>
+                 <!-- donation logo -->
+                  <div class="flex  items-center gap-2 ">
+                    <img class="w-7 h-7 object-cover" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt="">
+                    <h1 class="text-lg font-semibold">Donate Bangladesh</h1>
+
+                  </div>
+                  <!-- doller  -->
+                  <div class="flex items-center gap-2 text-lg font-bold ">
+                    <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <span id="nav-balance">5500</span>
+                    <h3>BDT</h3>
+
+                  </div>
+
+            </div>
+        </nav>
+
+        <!-- Donation & history button -->
+
+        <div class="flex justify-center  items-center gap-8 mt-10">
+            <button  id="donation-btn" class="py-4 px-8 bg-lime-400 rounded-xl text-center text-lg font-semibold">Donation</button>
+            <button id="history-tab" class=" py-4 px-8 border-2 border-gray-500 rounded-lg">History</button>
+
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container mx-auto  flex  flex-col lg:flex-row justify-center gap-10  lg:px-0 px-5 lg:mt-20">
+            <!-- image -->
+             <div>
+                <img class="w-[500px] h-[340px] rounded-2xl object-cover" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/noakhali.png" alt="">
+
+             </div>
+
+            <!-- content -->
+             <div>
+                <div class="flex items-center gap-2 text-lg font-semibold">
+                    <img class="" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <span id="balance-zero">0</span>
+                    <h3>BDT</h3>
+                </div>
+                <!-- input field div -->
+                 <div class="mt-7">
+                    <h1 class="text-2xl font-semibold ">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="mt-7 opacity-65 text-base font-semibold"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. <br>
+                         Your donation will help provide essential supplies and  to those affected by this disaster. <br> Every contribution, 
+                          big or small, makes  difference. Please join us in supporting the relief <br> efforts and making <br> a positive impact on the lives of those in need.</p>
+                    <div class="flex flex-col mt-7 gap-4">
+                        <input id="firstInput" class="py-3 border-2 border-gray-300 text-center rounded-xl" type="number" placeholder="Write Donation Amount">
+                        <button onclick="my_modal_1.showModal()" id="btn-donate" class="bg-lime-400 py-2 text-center text-lg font-semibold rounded-xl"> Donate Now</button>
+                    </div>
+                 </div>
+             </div>
+
+
+        </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Congratulation!</h3>
+    <p class="py-4">Your payment has been successfully processed.</p>
+    <div class="modal-action">
+      <form method="dialog">
+     
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+        <div class="container mx-auto  flex  flex-col lg:flex-row justify-center gap-10  lg:px-0 px-5 lg:mt-20">
+            <!-- image -->
+             <div>
+                <img class="w-[500px] h-[340px] rounded-2xl object-cover" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/feni.png" alt="">
+
+             </div>
+
+            <!-- content -->
+             <div>
+                <div class="flex items-center gap-2 text-lg font-semibold">
+                    <img class="" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <span id="six-hun">600</span>
+                    <h3>BDT</h3>
+                </div>
+                <!-- input field div -->
+                 <div class="mt-7">
+                    <h1 class="text-2xl font-semibold ">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <p class="mt-7 opacity-65 text-base font-semibold"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. <br>
+                         Your donation will help provide essential supplies and  to those affected by this disaster. <br> Every contribution, 
+                          big or small, makes  difference. Please join us in supporting the relief <br> efforts and making <br> a positive impact on the lives of those in need.</p>
+                    <div class="flex flex-col mt-7 gap-4">
+                        <input id="second-input" class="py-3 border-2 border-gray-300 text-center rounded-xl" type="text" placeholder="Write Donation Amount">
+                        <button id="btn-donate1" class="bg-lime-400 py-2 text-center text-lg font-semibold rounded-xl"> Donate Now</button>
+                    </div>
+                 </div>
+             </div>
+
+        </div>
+        <div class="container mx-auto  flex  flex-col lg:flex-row justify-center gap-10  lg:px-0 px-5 lg:mt-20">
+            <!-- image -->
+             <div>
+                <img class="w-[500px] h-[340px] rounded-2xl object-cover" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/quota-protest.png" alt="">
+
+             </div>
+
+            <!-- content -->
+             <div>
+                <div class="flex items-center gap-2 text-lg font-semibold">
+                    <img class="" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <span>2400</span>
+                    <h3>BDT</h3>
+                </div>
+                <!-- input field div -->
+                 <div class="mt-7">
+                    <h1 class="text-2xl font-semibold ">Aid for Injured in the Quota Movement</h1>
+                    <p class="mt-7 opacity-65 text-base font-semibold"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. <br>
+                         Your donation will help provide essential supplies and  to those affected by this disaster. <br> Every contribution, 
+                          big or small, makes  difference. Please join us in supporting the relief <br> efforts and making <br> a positive impact on the lives of those in need.</p>
+                    <div class="flex flex-col mt-7 gap-4">
+                        <input class="py-3 border-2 border-gray-300 text-center rounded-xl" type="text" placeholder="Write Donation Amount">
+                        <button class="bg-lime-400 py-2 text-center text-lg font-semibold rounded-xl"> Donate Now</button>
+                    </div>
+                 </div>
+             </div>
+
+        </div>
+    </main>
+    
     
 
-    
+    <script src="index.js"></script>
 </body>
 </html>
